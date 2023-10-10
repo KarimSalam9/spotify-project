@@ -5,9 +5,134 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  height: 100vh;
+  width: 100vw;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+.header-title{
+  height: 5%;
+  width: 100%;
+  position: absolute;
+  border-bottom: 2px solid;
+  background-color: darkgray;
+}
+.title-text{
+  text-align: left;
+  margin-top: 0;
+  margin-left: 1%;
+  font-weight: normal;
+  color: black;
+}
+.artist-cards-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  position: absolute;
+  top: 20%;
+  width: 100%;
+}
+
+.artist-card {
+  width: 10vw;
+  height: 50vh;
+  margin: 10px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  text-align: center;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  align-items: flex-start;
+}
+.grid-container-artists{
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 20px;
+  left: 50%;
+  justify-content: space-evenly;
+}
+.grid-container-albums{
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 20px;
+  left: 50%;
+  justify-content: space-evenly;
+}
+
+.artist-img{
+  width: 100%;
+  height: 50%;
+}
+.search-form{
+  position: absolute;
+  top: 10%;
+  left: 45%;
+}
+
+input[type="search"] {
+  border: none;
+  background-color: transparent;
+  margin: 0;
+  padding: 7px 8px 7px 30px;
+  background-image: url("https://upload.wikimedia.org/wikipedia/commons/5/55/Magnifying_glass_icon.svg");
+  background-size: 13px;
+  background-repeat: no-repeat;
+  background-position: 10px center;
+  font-size: 16px;
+  color: inherit;
+  border: 1px solid black;
+  border-radius: inherit;
+}
+
+input[type="search"]:focus {
+  box-shadow: 0 0 3px 0 #3f69a8;
+  border-color: #3f69a8;
+  outline: none;
+}
+
+.star-rating{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-content: space-between;
+  width: 65%;
+  align-items: baseline;
+}
+
+.albums-cards-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  position: absolute;
+  top: 20%;
+  width: 100%;
+}
+
+.albums-card {
+    width: 15vw;
+    height: 50vh;
+    margin: 10px;
+    border: 1px solid #ccc;
+    padding: 10px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: flex-start;
+}
+.albums-img{
+  width: 100%;
+  height: 50%;
+}
+.preview-section{
+  width: 100%;
+  border-top: 2px solid lightgrey;
+  cursor: pointer;
 }
